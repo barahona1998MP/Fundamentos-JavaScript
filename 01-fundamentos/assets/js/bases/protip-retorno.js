@@ -12,6 +12,8 @@ function imprimeArgumentos() {
 
 /**
  * argumentos con funcion flecha ... Esto hace referencia a un parametro rest despues de ese parametro no puede venir otro argumento
+
+ * La sintaxis de los parámetros rest nos permiten representar un número indefinido de argumentos como un array.
 */
 const imprimeArgumentos2 = (edad, ...args) => {
     // console.log(args)
@@ -25,13 +27,7 @@ console.log({casado, vivo, nombre, saludo})
 const {apellido: nuevoApellido}  = crearPersona('Marcos', 'Plata')
 console.log(nuevoApellido)
 
-let tony = {
-    nombre: 'Tony Stark',
-    codeName: 'Iroman',
-    vivo: false,
-    edad: 40,
-    trajes: ['Mark I', 'Mark V', 'Hulkbuster'],
-};
+
 
 /**
  * Destructuraciòn de argumentos
@@ -40,6 +36,16 @@ const imprimirPropiedades = ({nombre, codeName, vivo, edad, trajes}) => {
     console.log({nombre})
     console.log({codeName})
     console.log({vivo})
-    console.log({edad)}
+    console.log({edad})
     console.log({trajes})
 }
+
+let tony = {
+    nombre: 'Tony Stark',
+    codeName: 'Iroman',
+    vivo: false,
+    edad: 40,
+    trajes: ['Mark I', 'Mark V', 'Hulkbuster'],
+};
+
+imprimirPropiedades(tony)
